@@ -1,6 +1,7 @@
 #!/bin/sh
 
 oc create namespace openshift-local-storage
+oc create namespace openshift-container-storage
 oc label namespace openshift-local-storage "openshift.io/cluster-monitoring=true"
 
 # Go to UI and install Local Storage Operator
