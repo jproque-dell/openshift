@@ -1,0 +1,68 @@
+apiVersion: "local.storage.openshift.io/v1"
+kind: "LocalVolume"
+metadata:
+  name: "local-disks"
+  namespace: "openshift-local-storage" 
+spec:
+  nodeSelector: 
+    nodeSelectorTerms:
+    - matchExpressions:
+        - key: cluster.ocs.openshift.io/openshift-storage
+          operator: In
+          values:
+          - ""
+  storageClassDevices:
+    - storageClassName: "localblock-sc"
+      volumeMode: Block  
+      devicePaths: 
+        # NODE:compute-1.oss.labs
+        # nvme0n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e41ee94d5051
+        # nvme1n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4efe84d5051
+        # nvme2n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e427874d5051
+        # nvme3n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e452b54d5051
+        # nvme4n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4dbe84d5051
+        # nvme5n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4d4b54d5051
+        # nvme6n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e42d874d5051
+        # nvme7n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4bae84d5051
+        # NODE:compute-2.oss.labs
+        # nvme0n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e425e94d5051
+        # nvme1n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e46db54d5051
+        # nvme2n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e489b54d5051
+        # nvme3n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e48db54d5051
+        # nvme4n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e471b54d5051
+        # nvme5n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4d1b54d5051
+        # nvme6n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e461b54d5051
+        # nvme7n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e484e84d5051
+        # NODE:compute-3.oss.labs
+        # nvme0n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4bcb54d5051
+        # nvme1n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e49be84d5051
+        # nvme2n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e46bb54d5051
+        # nvme3n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4ffe84d5051
+        # nvme4n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4bde84d5051
+        # nvme5n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e41fe94d5051
+        # nvme6n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4f7e84d5051
+        # nvme7n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e465874d5051
