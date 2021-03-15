@@ -16,11 +16,12 @@ spec:
       volumeMode: Filesystem
       devicePaths: 
         # NODE:compute-1.oss.labs
-        # sda
-        - /dev/disk/by-id/wwn-0x64cd98f047af5b0027b62f2aaebafca4
+        # nvme0n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e41ee94d5051
         # NODE:compute-2.oss.labs
-        # sda
-        - /dev/disk/by-id/wwn-0x64cd98f049b2a80027b62f9b9f3a4dcb
+        # nvme0n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e425e94d5051
         # NODE:compute-3.oss.labs
-        # sda
-        - /dev/disk/by-id/wwn-0x64cd98f047af020027b62f9a9bdbd0fb
+        # nvme0n1
+        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4bcb54d5051
+

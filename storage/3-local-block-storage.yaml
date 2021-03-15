@@ -16,8 +16,6 @@ spec:
       volumeMode: Block  
       devicePaths: 
         # NODE:compute-1.oss.labs
-        # nvme0n1
-        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e41ee94d5051
         # nvme1n1
         - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4efe84d5051
         # nvme2n1
@@ -33,8 +31,6 @@ spec:
         # nvme7n1
         - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4bae84d5051
         # NODE:compute-2.oss.labs
-        # nvme0n1
-        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e425e94d5051
         # nvme1n1
         - /dev/disk/by-id/nvme-eui.01000000010000005cd2e46db54d5051
         # nvme2n1
@@ -50,8 +46,6 @@ spec:
         # nvme7n1
         - /dev/disk/by-id/nvme-eui.01000000010000005cd2e484e84d5051
         # NODE:compute-3.oss.labs
-        # nvme0n1
-        - /dev/disk/by-id/nvme-eui.01000000010000005cd2e4bcb54d5051
         # nvme1n1
         - /dev/disk/by-id/nvme-eui.01000000010000005cd2e49be84d5051
         # nvme2n1
